@@ -1,5 +1,6 @@
 Instructions on running Code: 
-- run assessment.py python3 assessment.py
+- run the command "pip install -r requirements.txt"
+- run the command "python3 assessment.py"
 - You will be prompted to enter the file names that you want to annotate WITHOUT THE EXTENSION
   - For example: com.apalon.ringtones com.dropbox.android com.giphy.messenger-1 
 - Hit enter and check the annotated_images folder
