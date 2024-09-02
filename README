@@ -1,0 +1,19 @@
+Instructions on running Code: 
+- run assessment.py python3 assessment.py
+- You will be prompted to enter the file names that you want to annotate WITHOUT THE EXTENSION
+  - For example: com.apalon.ringtones com.dropbox.android com.giphy.messenger-1 
+- Hit enter and check the annotated_images folder
+
+I used the following Repositories: 
+- lxml to parse the xml (pip install lxml) 
+- pillows for annotating the images (pip install pillows) 
+- json to convert the bounds from a string to a usable list
+- os to create a new folder to put the annotated images in 
+
+Description
+My implementation involves a command line input from the user with the format <app.package>-<screen#>. The user can put multiple inputs if needed.
+Using this format, my implementation will attempt to open a matching xml and png file. If this file pair is not present, the next user input is checked. 
+The user can add additional png/xml pairs to the Programming-Assignment-Data folder as long as these criteria are met. 
+If both necessary xml and png files are present and the xml/png files are valid, we will iterate all of the leaf nodes (child nodes with no children) and get the bounds attribute. 
+Using the bounds attribute, we can use the Pillow library to draw a square on the provided png. After all of the leaf nodes are iterated/drawn, the image is added to the annotated_images folder, 
+and the next image is annotated. 
